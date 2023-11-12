@@ -1,4 +1,8 @@
 local plugins = {
+    "RRethy/vim-illuminate",
+    "tpope/vim-fugitive",
+    "mbbill/undotree",
+    "lewis6991/gitsigns.nvim",
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -25,10 +29,17 @@ local plugins = {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate"
     },
-    "RRethy/vim-illuminate",
-    "tpope/vim-fugitive",
-    "mbbill/undotree",
-    "lewis6991/gitsigns.nvim",
+    {
+        'numToStr/Comment.nvim',
+        lazy = false,
+    },
+    {
+        "nvimdev/guard.nvim",
+        -- Builtin configuration, optional
+        dependencies = {
+            "nvimdev/guard-collection",
+        },
+    },
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
     -- LSP Support
