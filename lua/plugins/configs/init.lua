@@ -1,3 +1,8 @@
 require('plugins.configs.telescope')
 require('plugins.configs.catppuccin')
 require('plugins.configs.treesitter')
+require('plugins.configs.fugitive')
+require('plugins.configs.lsp')
+require('plugins.configs.cmp')
+require('plugins.configs.undotree')
+require('plugins.configs.gitsigns')
