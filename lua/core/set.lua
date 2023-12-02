@@ -27,3 +27,15 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
+
+vim.o.timeoutlen=500
+vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "*",
+    callback = function()
+        package.loaded["feline"] = nil
+        package.loaded["catppuccin.groups.integrations.feline"] = nil
+        require("feline").setup {
+            components = require("catppuccin.groups.integrations.feline").get(),
+        }
+    end,
+})
